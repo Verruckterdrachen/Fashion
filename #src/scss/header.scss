@@ -203,13 +203,13 @@
 	padding: 10px 20px;
 	box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
 	position: absolute;
-	@media (min-width: 1138px) {
+	@media (min-width: 1168px) {
 		width: 1138px;
 		left: 50%;
 		transform: translate(-50%, 0px);
 	}
-	width: 100%;
-	left: 0;
+	width: calc(100% - 30px);
+	left: 15px;
 	top: -100%;
 	z-index: 5;
 	opacity: 0;

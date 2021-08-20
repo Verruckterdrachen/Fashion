@@ -1019,15 +1019,15 @@ body.ie ._ibg img {
   padding: 10px 20px;
   box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
   position: absolute;
-  width: 100%;
-  left: 0;
+  width: calc(100% - 30px);
+  left: 15px;
   top: -100%;
   z-index: 5;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease 0s;
 }
-@media (min-width: 1138px) {
+@media (min-width: 1168px) {
   .form-header {
     width: 1138px;
     left: 50%;
