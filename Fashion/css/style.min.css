@@ -171,10 +171,21 @@ body._lock {
 
 .button {
   display: inline-flex;
-  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+  min-height: 35px;
+  min-width: 147px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #22262a;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease 0s;
 }
-.button._fw {
-  width: 100%;
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: #000;
+  }
 }
 
 .select {
@@ -816,15 +827,13 @@ body.ie ._ibg img {
     min-height: 60px;
   }
 }
-.header._scroll .header__logo .logo__text {
-  font-size: 20px;
-}
 .header__wrapper {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 50;
+  background-color: #fff;
   transition: background-color 0.3s ease 0s;
 }
 .header__body {
@@ -1039,6 +1048,84 @@ body.ie ._ibg img {
 }
 .form-header__input {
   width: 100%;
+}
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  background: url("../img/hero/hero-bg.jpg") 10% center/cover no-repeat;
+}
+.hero__container {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 120px 15px 100px 0px;
+  padding-left: 670px;
+  color: inherit;
+  z-index: 2;
+}
+@media (max-width: 1168px) {
+  .hero__container {
+    padding-left: calc(0px + 670 * ((100vw - 320px) / 848));
+  }
+}
+@media (max-width: 991.98px) {
+  .hero__container {
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+  }
+}
+.hero__container *:last-child {
+  margin-bottom: 0;
+}
+.hero__suptitle {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0px 0px 0.8333333333em 0px;
+}
+.hero__title {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0px 0px 0.1875em 0px;
+}
+@media (max-width: 1168px) {
+  .hero__title {
+    font-size: calc(40px + 40 * ((100vw - 320px) / 848));
+  }
+}
+.hero__text {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px 0px 1.9444444444em 0px;
+}
+@media (max-width: 767.98px) {
+  .hero__text {
+    font-size: 16px;
+  }
+}
+.hero__actions {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 479.98px) {
+  .hero__actions {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.hero__button:first-child {
+  margin: 0px 34px 0px 0px;
+}
+@media (max-width: 479.98px) {
+  .hero__button:first-child {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 .page {

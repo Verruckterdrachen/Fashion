@@ -19,13 +19,20 @@
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	align-items: center;
+	min-height: 35px;
+	min-width: 147px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 18px;
+	background-color: $mainColor;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: #000;
 		}
-	}
-	&._fw {
-		width: 100%;
 	}
 }
 //</BUTTONS>====================================================================================================

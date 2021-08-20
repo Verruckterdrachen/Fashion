@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
+@@include('_head.html',{
+"title":"Home"
+})
 
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container _container">
+					<h2 class="hero__suptitle">new trend</h2>
+					<h1 class="hero__title">collusion</h1>
+					<div class="hero__text">An exclusive selection of this season's trends. lorem</div>
+					<div class="hero__actions">
+						<a href="" class="hero__button button">discover</a>
+						<a href="" class="hero__button button">shop now</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
 </html>
