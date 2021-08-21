@@ -7,7 +7,7 @@
   font-weight: 400;
   font-style: normal;
 }
-[class^=_icon-]:before,
+._init .menu-footer__title::before, [class^=_icon-]:before,
 [class*=" _icon-"]:before {
   font-family: "icons";
   font-style: normal;
@@ -22,6 +22,10 @@
 [class^=_icon-]:before,
 [class*=" _icon-"]:before {
   display: block;
+}
+
+._icon-arrow-down:before, ._init .menu-footer__title:before {
+  content: "\e908";
 }
 
 ._icon-facebook:before {
@@ -167,6 +171,21 @@ body._lock {
   max-width: 1168px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+  border-radius: 5px;
+}
+.form__item {
+  font-size: 15px;
+}
+.form__item::before {
+  padding: 0px 15px 0px 0px;
 }
 
 .button {
@@ -1070,11 +1089,6 @@ body.ie ._ibg img {
 }
 
 .form-header {
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
   position: absolute;
   width: calc(100% - 30px);
   left: 15px;
@@ -1091,11 +1105,173 @@ body.ie ._ibg img {
     transform: translate(-50%, 0px);
   }
 }
-.form-header__item::before {
-  padding: 0px 15px 0px 0px;
-}
 .form-header__input {
   width: 100%;
+}
+
+.footer {
+  background-color: #f2f8fc;
+}
+.footer__body {
+  padding-top: 115px;
+  padding-bottom: 105px;
+  font-size: 15px;
+}
+@media (min-width: 991.98px) {
+  .footer__body {
+    display: grid;
+    grid-template-columns: 1fr 532px;
+    column-gap: 180px;
+  }
+}
+@media (min-width: 991.98px) and (max-width: 1168px) {
+  .footer__body {
+    column-gap: calc(0px + 180 * ((100vw - 320px) / 848));
+  }
+}
+@media (max-width: 1168px) {
+  .footer__body {
+    padding-top: calc(30px + 85 * ((100vw - 320px) / 848));
+  }
+}
+@media (max-width: 1168px) {
+  .footer__body {
+    padding-bottom: calc(30px + 75 * ((100vw - 320px) / 848));
+  }
+}
+.footer__copy {
+  background-color: #e7f5f8;
+  text-align: center;
+  padding: 35px 15px;
+  line-height: 120%;
+}
+
+.about-footer {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 991.98px) {
+  .about-footer {
+    margin: 0px 0px 50px 0px;
+  }
+}
+.about-footer__logo {
+  margin: 0px 0px 0.7142857143em 0px;
+}
+.about-footer__text {
+  line-height: 120%;
+  margin: 0px 0px 2.6666666667em 0px;
+}
+.about-footer__location {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 1em 0px;
+}
+.about-footer__location::before {
+  padding: 0px 25px 0px 0px;
+}
+.about-footer__link {
+  color: #22262a;
+}
+.about-footer__link:not(:last-child) {
+  margin: 0px 0px 0.6666666667em 0px;
+}
+@media (any-hover: hover) {
+  .about-footer__link:hover {
+    text-decoration: underline;
+  }
+}
+.about-footer__social {
+  margin: 16px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+}
+.about-footer__icon {
+  color: #22262a;
+  transition: color 0.3s ease 0s;
+}
+.about-footer__icon:not(:last-child) {
+  margin: 0px 15px 0px 0px;
+}
+@media (any-hover: hover) {
+  .about-footer__icon:hover {
+    color: #888;
+  }
+}
+
+.main-footer__title {
+  margin: 0px 0px 0.8571428571em 0px;
+}
+
+.form-footer {
+  margin-bottom: 70px;
+}
+@media (max-width: 1168px) {
+  .form-footer {
+    margin-bottom: calc(30px + 40 * ((100vw - 320px) / 848));
+  }
+}
+.form-footer__input {
+  flex: 1 1 auto;
+}
+.form-footer__item {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (min-width: 767.98px) {
+  .menu-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu-footer__column {
+    margin: 0px 0px 20px 0px;
+  }
+}
+.menu-footer__title {
+  cursor: default;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (min-width: 767.98px) {
+  .menu-footer__title {
+    margin: 0px 0px 1.25em 0px;
+  }
+}
+.menu-footer__title::before {
+  margin: 0px 0px 0px 20px;
+}
+._init .menu-footer__title {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+._init .menu-footer__title::before {
+  transition: transform 0.3s ease 0s;
+}
+.menu-footer__title._active::before {
+  transform: rotate(180deg);
+}
+.menu-footer__list li:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+@media (max-width: 767.98px) {
+  .menu-footer__list {
+    padding: 20px 0px 0px 0px;
+  }
+}
+.menu-footer__link {
+  color: #22262a;
+  font-size: 15px;
+}
+@media (any-hover: hover) {
+  .menu-footer__link:hover {
+    text-decoration: underline;
+  }
 }
 
 .hero {

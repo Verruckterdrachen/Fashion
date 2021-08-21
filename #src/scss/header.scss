@@ -191,17 +191,7 @@
 	}
 }
 .form-header {
-	background-color: #fff;
-	display: flex;
-	align-items: center;
-	padding: 10px 15px;
-	box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
 	position: absolute;
-	@media (min-width: 1168px) {
-		width: 1138px;
-		left: 50%;
-		transform: translate(-50%, 0px);
-	}
 	width: calc(100% - 30px);
 	left: 15px;
 	top: -100%;
@@ -209,10 +199,10 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.3s ease 0s;
-	&__item {
-		&::before {
-			padding: 0px 15px 0px 0px;
-		}
+	@media (min-width: 1168px) {
+		width: 1138px;
+		left: 50%;
+		transform: translate(-50%, 0px);
 	}
 	&__input {
 		width: 100%;
