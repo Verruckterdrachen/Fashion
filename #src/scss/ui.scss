@@ -12,7 +12,7 @@
 	}
 }
 .section {
-	@include adaptiv-value("padding-top", 111, 50, 1);
+	@include adaptiv-value("margin-top", 111, 50, 1);
 }
 .head {
 	text-align: center;
@@ -26,11 +26,6 @@
 	font-size: 18px;
 	font-weight: 500;
 	text-transform: uppercase;
-}
-.text-big {
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 120%;
 }
 .title {
 	font-weight: 700;

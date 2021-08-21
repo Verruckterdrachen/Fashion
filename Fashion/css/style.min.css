@@ -531,11 +531,11 @@ textarea.input {
 }
 
 .section {
-  padding-top: 111px;
+  margin-top: 111px;
 }
 @media (max-width: 1168px) {
   .section {
-    padding-top: calc(50px + 61 * ((100vw - 320px) / 848));
+    margin-top: calc(50px + 61 * ((100vw - 320px) / 848));
   }
 }
 
@@ -558,12 +558,6 @@ textarea.input {
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
-}
-
-.text-big {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 120%;
 }
 
 .title {
@@ -1143,6 +1137,9 @@ body.ie ._ibg img {
   margin: 0px 0px 0.1875em 0px;
 }
 .hero__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
   margin: 0px 0px 1.9444444444em 0px;
 }
 .hero__actions {
@@ -1397,6 +1394,59 @@ body.ie ._ibg img {
 @media (any-hover: hover) {
   .avone__link:hover::after {
     width: 33.333%;
+  }
+}
+
+.shop {
+  display: flex;
+  min-height: 100vh;
+  background: url("../img/tachen/tachen-bg.jpg") center/cover no-repeat;
+}
+.shop__container {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 120px 15px 130px 15px;
+  padding-right: 670px;
+  color: inherit;
+  z-index: 2;
+}
+@media (max-width: 1168px) {
+  .shop__container {
+    padding-right: calc(0px + 670 * ((100vw - 320px) / 848));
+  }
+}
+@media (max-width: 991.98px) {
+  .shop__container {
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+  }
+}
+.shop__container *:last-child {
+  margin-bottom: 0;
+}
+.shop__suptitle {
+  margin: 0px 0px 0.8333333333em 0px;
+}
+.shop__title {
+  margin: 0px 0px 0.1875em 0px;
+}
+.shop__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  margin: 0px 0px 1.9444444444em 0px;
+}
+.shop__button {
+  min-width: 214px;
+}
+@media (min-width: 991.98px) {
+  .shop__button {
+    align-self: flex-start;
   }
 }
 

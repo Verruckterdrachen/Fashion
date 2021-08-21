@@ -30,6 +30,9 @@
 		margin: 0px 0px 15px/80px * 1em 0px;
 	}
 	&__text {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 120%;
 		margin: 0px 0px 35px/18px * 1em 0px;
 	}
 	&__actions {
@@ -268,6 +271,50 @@
 					width: 33.333%;
 				}
 			}
+		}
+	}
+}
+//============================================================================
+.shop {
+	display: flex;
+	min-height: 100vh;
+	background: url("../img/tachen/tachen-bg.jpg") center / cover no-repeat;
+	&__container {
+		flex: 1 1 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 120px 15px 130px 15px;
+		@include adaptiv-value("padding-right", 670, 0, 1);
+		color: inherit;
+		z-index: 2;
+		@media (max-width: $md2+px) {
+			align-items: center;
+			justify-content: center;
+			padding-right: 15px;
+			padding-left: 15px;
+			text-align: center;
+		}
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__suptitle {
+		margin: 0px 0px 15px/18px * 1em 0px;
+	}
+	&__title {
+		margin: 0px 0px 15px/80px * 1em 0px;
+	}
+	&__text {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 120%;
+		margin: 0px 0px 35px/18px * 1em 0px;
+	}
+	&__button {
+		min-width: 214px;
+		@media (min-width: $md2+px) {
+			align-self: flex-start;
 		}
 	}
 }
