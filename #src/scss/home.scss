@@ -23,27 +23,14 @@
 			margin-bottom: 0;
 		}
 	}
-	&__body {
-	}
 	&__suptitle {
-		font-size: 18px;
-		font-weight: 500;
-		text-transform: uppercase;
 		margin: 0px 0px 15px/18px * 1em 0px;
 	}
 	&__title {
-		@include adaptiv-value("font-size", 80, 40, 1);
-		font-weight: 700;
-		text-transform: uppercase;
 		margin: 0px 0px 15px/80px * 1em 0px;
 	}
 	&__text {
-		font-size: 18px;
-		font-weight: 500;
 		margin: 0px 0px 35px/18px * 1em 0px;
-		@media (max-width: $md3+px) {
-			font-size: 16px;
-		}
 	}
 	&__actions {
 		display: flex;
@@ -186,6 +173,101 @@
 			color: $mainColor;
 			text-decoration: line-through;
 			margin: 0px 15px 0px 0px;
+		}
+	}
+}
+//============================================================================
+.avone {
+	&__head {
+		@include adaptiv-value("margin-bottom", 65, 30, 1);
+	}
+	&__body {
+		text-align: center;
+	}
+	&__items {
+		display: flex;
+		align-items: flex-start;
+		position: relative;
+		@media (max-width: $md2+px) {
+			display: grid;
+			gap: 15px;
+			grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	&__image {
+		overflow: hidden;
+		img {
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.025);
+				}
+			}
+		}
+		@media (min-width: $md2+px) {
+			&:nth-child(1) {
+				flex: 0 1 552px;
+				padding: 0px 0px 602px 0px;
+				margin: 87px 30px 0px 0px;
+			}
+			&:nth-child(2) {
+				flex: 0 1 514px;
+				padding: 0px 0px 451px 0px;
+			}
+		}
+		padding: 0px 0px 120% 0px;
+	}
+	&__primary {
+		@media (min-width: $md2+px) {
+			display: flex;
+			position: absolute;
+			right: 226px;
+			bottom: 0;
+			.avone__image {
+				flex: 0 0 227px;
+				padding: 0px 0px 281px 0px;
+				position: relative;
+				overflow: visible;
+				&::before {
+					content: "";
+					position: absolute;
+					width: 200%;
+					height: 100%;
+					left: -25px;
+					top: -25px;
+					background-color: #fff;
+					z-index: 0;
+				}
+			}
+		}
+	}
+	&__link {
+		color: $mainColor;
+		font-size: 15px;
+		align-self: flex-end;
+		white-space: nowrap;
+		margin: 0px 33px 33px 0px;
+		text-transform: uppercase;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: -8px;
+			left: 0;
+			background-color: $mainColor;
+			transition: width 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					width: 33.333%;
+				}
+			}
 		}
 	}
 }

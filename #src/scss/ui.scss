@@ -17,6 +17,21 @@
 .head {
 	text-align: center;
 }
+.title-big {
+	@include adaptiv-value("font-size", 80, 40, 1);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.suptitle-big {
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.text-big {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 120%;
+}
 .title {
 	font-weight: 700;
 	font-size: 20px;
