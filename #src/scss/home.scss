@@ -68,10 +68,7 @@
 	&__body {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
-		@media (min-width: 1153px) {
-			gap: 25px;
-		}
-		gap: 15px;
+		@include adaptiv-value("gap", 25, 15, 1);
 	}
 	&__image {
 		padding: 0px 0px 100% 0px;
@@ -83,7 +80,6 @@
 		@media (any-hover: hover) {
 			&:hover {
 				img {
-					will-change: transform;
 					transform: scale(1.025);
 				}
 				.hover-categories {
@@ -126,5 +122,71 @@
 	text-align: center;
 	transition: all 0.3s ease 0s;
 	background: rgba(0, 0, 0, 0.5);
+}
+//============================================================================
+.fashion {
+	&__head {
+		@include adaptiv-value("margin-bottom", 65, 30, 1);
+	}
+	&__body {
+		display: grid;
+		@include adaptiv-value("column-gap", 22, 15, 1);
+		row-gap: 32px;
+		grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+	}
+}
+.card-fashion {
+	display: flex;
+	flex-direction: column;
+	&__image {
+		padding: 0px 0px 371px/268px * 100% 0px;
+		margin: 0px 0px 28px 0px;
+		overflow: hidden;
+		img {
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.025);
+				}
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1 1 auto;
+	}
+	&__collection {
+		font-size: 15px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin: 0px 0px 10px/15px * 1em 0px;
+	}
+	&__title {
+		flex: 1 1 auto;
+		display: inline-flex;
+		color: $mainColor;
+		font-size: 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0px 0px 10px/15px * 1em 0px;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__price {
+		font-size: 15px;
+		color: $primaryColor;
+		&_old {
+			color: $mainColor;
+			text-decoration: line-through;
+			margin: 0px 15px 0px 0px;
+		}
+	}
 }
 //====================================================================================================

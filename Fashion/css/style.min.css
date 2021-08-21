@@ -539,6 +539,21 @@ textarea.input {
   }
 }
 
+.head {
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0px 0px 0.75em 0px;
+}
+
+.text {
+  font-size: 15px;
+}
+
 .row:after {
   display: block;
   content: "";
@@ -1154,11 +1169,11 @@ body.ie ._ibg img {
 .categories__body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
-  gap: 15px;
+  gap: 25px;
 }
-@media (min-width: 1153px) {
+@media (max-width: 1168px) {
   .categories__body {
-    gap: 25px;
+    gap: calc(15px + 10 * ((100vw - 320px) / 848));
   }
 }
 .categories__image {
@@ -1171,7 +1186,6 @@ body.ie ._ibg img {
 }
 @media (any-hover: hover) {
   .categories__image:hover img {
-    will-change: transform;
     transform: scale(1.025);
   }
   .categories__image:hover .hover-categories {
@@ -1209,6 +1223,79 @@ body.ie ._ibg img {
   text-align: center;
   transition: all 0.3s ease 0s;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.fashion__head {
+  margin-bottom: 65px;
+}
+@media (max-width: 1168px) {
+  .fashion__head {
+    margin-bottom: calc(30px + 35 * ((100vw - 320px) / 848));
+  }
+}
+.fashion__body {
+  display: grid;
+  column-gap: 22px;
+  row-gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+}
+@media (max-width: 1168px) {
+  .fashion__body {
+    column-gap: calc(15px + 7 * ((100vw - 320px) / 848));
+  }
+}
+
+.card-fashion {
+  display: flex;
+  flex-direction: column;
+}
+.card-fashion__image {
+  padding: 0px 0px 138.4328358209% 0px;
+  margin: 0px 0px 28px 0px;
+  overflow: hidden;
+}
+.card-fashion__image img {
+  transition: transform 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .card-fashion__image:hover img {
+    transform: scale(1.025);
+  }
+}
+.card-fashion__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 auto;
+}
+.card-fashion__collection {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0px 0px 0.6666666667em 0px;
+}
+.card-fashion__title {
+  flex: 1 1 auto;
+  display: inline-flex;
+  color: #22262a;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px 0px 0.6666666667em 0px;
+}
+@media (any-hover: hover) {
+  .card-fashion__title:hover {
+    text-decoration: underline;
+  }
+}
+.card-fashion__price {
+  font-size: 15px;
+  color: #cf2929;
+}
+.card-fashion__price_old {
+  color: #22262a;
+  text-decoration: line-through;
+  margin: 0px 15px 0px 0px;
 }
 
 .page {
