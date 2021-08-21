@@ -535,7 +535,7 @@ textarea.input {
 }
 @media (max-width: 1168px) {
   .section {
-    padding-top: calc(40px + 71 * ((100vw - 320px) / 848));
+    padding-top: calc(50px + 61 * ((100vw - 320px) / 848));
   }
 }
 
@@ -552,6 +552,7 @@ textarea.input {
 
 .text {
   font-size: 15px;
+  line-height: 120%;
 }
 
 .row:after {
@@ -1163,7 +1164,7 @@ body.ie ._ibg img {
 }
 @media (max-width: 1168px) {
   .categories {
-    padding-top: calc(40px + 80 * ((100vw - 320px) / 848));
+    padding-top: calc(50px + 70 * ((100vw - 320px) / 848));
   }
 }
 .categories__body {

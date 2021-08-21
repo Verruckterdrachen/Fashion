@@ -64,7 +64,7 @@
 }
 //============================================================================
 .categories {
-	@include adaptiv-value("padding-top", 120, 40, 1);
+	@include adaptiv-value("padding-top", 120, 50, 1);
 	&__body {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
